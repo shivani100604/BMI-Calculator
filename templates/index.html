@@ -2,58 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Scientific Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator | Shivani Portfolio</title>
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-  <div class="calculator">
-    <h1 class="title">Scientific Calculator</h1>
 
-    <input type="text" id="display" disabled placeholder="0">
-
-    <p class="output-label"><strong>Output:</strong></p>
-
+  <div class="container">
+    <h1>Scientific Calculator</h1>
+    
+    <input type="text" id="display" placeholder="0" disabled>
+    
     <div class="bmi-section">
       <input type="number" id="weight" placeholder="Weight (kg)">
       <input type="number" id="height" placeholder="Height (m)">
-      <button onclick="calculateBMI()">BMI</button>
+      <button class="bmi-btn" onclick="calculateBMI()">Calculate BMI</button>
     </div>
 
-    <div class="buttons">
-      <button onclick="append('1')">1</button>
-      <button onclick="append('2')">2</button>
-      <button onclick="append('3')">3</button>
-      <button onclick="append('+')">+</button>
+    <div id="result"></div>
 
-      <button onclick="append('4')">4</button>
-      <button onclick="append('5')">5</button>
-      <button onclick="append('6')">6</button>
-      <button onclick="append('-')">-</button>
+    <div class="buttons-grid">
+      <button class="special" onclick="clearDisplay()">C</button>
+      <button class="special" onclick="backspace()">DEL</button>
+      <button class="op" onclick="append('Math.PI')">π</button>
+      <button class="op" onclick="append('/')">/</button>
 
       <button onclick="append('7')">7</button>
       <button onclick="append('8')">8</button>
       <button onclick="append('9')">9</button>
-      <button onclick="append('*')">*</button>
+      <button class="op" onclick="append('*')">*</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button class="op" onclick="append('-')">-</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button class="op" onclick="append('+')">+</button>
 
       <button onclick="append('0')">0</button>
       <button onclick="append('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="append('/')">/</button>
-
-      <button onclick="append('Math.sqrt(')">sqrt</button>
-      <button onclick="append('Math.sin(')">sin</button>
-      <button onclick="append('Math.cos(')">cos</button>
-      <button onclick="append('Math.tan(')">tan</button>
-
-      <button onclick="append('Math.asin(')">asin</button>
-      <button onclick="append('Math.acos(')">acos</button>
-      <button onclick="append('Math.atan(')">atan</button>
       <button onclick="append('Math.log(')">log</button>
+      <button class="equal" onclick="calculate()">=</button>
 
-      <button onclick="append('Math.PI')">π</button>
-      <button onclick="append('factorial(')">Factorial</button>
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="backspace()">DEL</button>
+      <button class="sci" onclick="append('Math.sqrt(')">sqrt</button>
+      <button class="sci" onclick="append('Math.sin(')">sin</button>
+      <button class="sci" onclick="append('Math.cos(')">cos</button>
+      <button class="sci" onclick="append('Math.tan(')">tan</button>
+      
+      <button class="sci" onclick="append('Math.asin(')">asin</button>
+      <button class="sci" onclick="append('Math.acos(')">acos</button>
+      <button class="sci" onclick="append('Math.atan(')">atan</button>
+      <button class="sci" onclick="append('factorial(')">x!</button>
     </div>
   </div>
 
