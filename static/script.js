@@ -1,4 +1,4 @@
-// Display update karne ke liye function
+
 function append(value) {
     const display = document.getElementById('display');
     // Agar sirf 0 hai toh use naye value se replace karein
@@ -9,13 +9,13 @@ function append(value) {
     }
 }
 
-// Screen saaf karne ke liye
+
 function clearDisplay() {
     document.getElementById('display').value = '0';
     document.getElementById('result').innerHTML = '';
 }
 
-// Last digit delete karne ke liye
+
 function backspace() {
     const display = document.getElementById('display');
     if (display.value.length > 1) {
